@@ -1,0 +1,315 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 300px; /*(ширина и высота карточки модального окна);*/
+    --height__head_website: 106px; /*(высота шапки сайта);*/
+    --color_white_1: rgb(222, 220, 220); /* (белый цвет надписи); */
+    --color_blue_1: rgb(19, 129, 239); /* (голубой цвет надписи); */
+}
+
+
+/*=================================================================================*/
+/*                                  СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+.body_main_cl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.organizations_activities_cl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*___Страница о Себе___*/
+.blocg_1_cl {
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(18, 17, 17);
+    color: var(--color_white_1);
+}
+
+.blocg_1_cl > h2 {
+    font-size: 40px;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+    .blocg_1_cl > h2 {
+        font-size: 35px;
+    }
+}
+
+.blocg_1_parents_cl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blocg_1_mi_cl {
+    /*_____Я_____*/
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.blocg_1_mi_cl > p {
+    /*_____Я_____*/
+    text-indent: 30px;
+}
+
+.blocg_1_achievements_cl {
+    /*_____Мои навыки_____*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.blocg_1_achievements_cl > h2 {
+    margin: 0;
+    margin-top: 20px;
+}
+
+.blocg_1_achievements_cl > h3 {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.blocg_1_achievements_cl > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 5px;
+}
+
+.blocg_1_achievements_cl > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.blocg_1_achievements_cl > div > div > img {
+    width: 80px;
+    height: 80px;
+}
+
+/*___Портфолио___*/
+
+.description_organization_cl {
+    /*портфолио*/
+    width: 92%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 40px;
+    border-radius: 30px;
+    margin: 20px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.description_organization_cl > h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    color: var(--color_white_1);
+    text-shadow: 2px 2px 2px black;
+}
+
+@media (max-width: 500px) {
+    .description_organization_cl > h2 {
+        font-size: 30px;
+    }
+}
+
+.portfolio_cl {
+    width: 92%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio_cl > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.portfolio_cl > div:hover {
+    cursor: pointer;
+}
+
+.portfolio_cl > div > div {
+    width: 400px;
+    height: 220px;
+    border: solid 0.5px black;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 5px;
+}
+
+.portfolio_cl > div > span {
+    width: 400px;
+    height: 20px;
+    font-size: 18px;
+    color: var(--color_white_1);
+    text-shadow: 1.5px 1.5px 2px black;
+}
+
+@media (max-width: 500px) {
+    .portfolio_cl > div > div  {
+        width: 300px;
+        height: 165px;
+    }
+    .portfolio_cl > div > span {
+        width: 300px;
+    }
+}
+
+.portfolio_cl > div > span:nth-child(2) {
+    height: 20px;
+    text-decoration: underline;
+}
+
+.portfolio_cl > div > div {
+    background-size: 400px 220px;
+    background-position: 50% 50%;
+    filter: brightness(60%);
+    transition: 300ms;
+}
+
+.portfolio_cl > div > div:hover {
+    filter: brightness(120%);
+    background-size: 525px 275px;
+}
+
+.portfolio_cl > div:nth-child(1) > div {
+    background-image: url(/static/work_img/5.jpg);
+}
+
+.portfolio_cl > div:nth-child(2) > div {
+    background-image: url(/static/work_img/4.jpg);
+}
+
+.portfolio_cl > div:nth-child(3) > div {
+    background-image: url(/static/work_img/3.jpg);
+}
+
+.portfolio_cl > div:nth-child(4) > div {
+    background-image: url(/static/work_img/2.jpg);
+}
+
+.portfolio_cl > div:nth-child(5) > div {
+    background-image: url(/static/work_img/1.png);
+}
+
+/*___ЗАКАЗАТЬ___*/
+.order_main_cl {
+    width: 92%;
+    border: solid 3px var(--color_white_1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(23, 23, 23);
+}
+
+.order_main_cl {
+    color: var(--color_white_1);
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+    .order_main_cl > h2 {
+        font-size: 30px;
+    }
+}
+
+.order_main_cl > p {
+    text-indent: 40px;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.list_of_order_methods {
+    /* fl.ru */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.list_of_order_methods > div {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    font-size: 21px;
+}
+
+@media (max-width: 900px) {
+    .list_of_order_methods > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.list_of_order_methods > div > div:nth-child(1) {
+    width: 250px;
+    height: 50px;
+    border: solid 3px var(--color_white_1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_of_order_methods > div > div:nth-child(1):hover {
+    cursor: pointer;
+    border-color: var(--color_blue_1);
+    color: var(--color_blue_1);
+    text-decoration: underline;
+}
+
+.list_of_order_methods > div > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
