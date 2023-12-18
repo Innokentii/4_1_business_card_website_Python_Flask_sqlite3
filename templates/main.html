@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaskProg</title>
+    <link rel="stylesheet" href="/static/main_css.css">
+    <link rel="icon" href="/static/icon_haske.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/1_main_css.css">
+</head>
+
+<body id="html_body_id">
+    <!--=================================================================================-->
+    <!--_____________________________МОДАЛЬНОЕ ОКНО ЗАГРУЗКИ_____________________________-->
+    <!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+    <div class="load_modal_opa_cl" id="load_modal_opa_id">
+        <!--прозначное окно модального окна-->
+    </div>
+    <div class="load_modal_car_cl" id="load_modal_car_id">
+        <!--карточка модального окна-->
+    </div>
+    <div class="load_modal_img_cl" id="load_modal_img_div_id">
+        <!--гифка загрузки-->
+        <img src="/static/load_haske.png" alt="Н/Ф" id="load_modal_img_id">
+    </div>
+    <div class="load_modal_text_cl" id="load_modal_text_block_id">
+        <!--ЗАПИСКИ_ЗАГРУЗКИ-->
+        <div>HaskiProg</div>
+        <div id="load_modal_text_id">loading</div>
+    </div>
+    <script>
+        document.addEventListener('scroll', _=>{position_load_f()});
+        document.addEventListener('DOMContentLoaded', _=>{position_load_f()})
+        function position_load_f() {
+            let load_modal_car = document.getElementById('load_modal_car_id');
+            let load_modal_img = document.getElementById('load_modal_img_div_id');
+            let load_modal_text = document.getElementById('load_modal_text_block_id');
+            var currentY = window.scrollY || window.pageYOffset;
+            load_modal_car.style.top = `${currentY+200}px`;
+            load_modal_img.style.top = `${currentY+230}px`;
+            load_modal_text.style.top = `${currentY+380}px`;
+        }
+    </script>
+    <!--=================================================================================-->
+    <!--___________________________________ШАПКА САЙТА___________________________________-->
+    <!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+    <div class="head_website_dempf_cl" id="head_website_dempf_id">
+        <!--Фиксированный (демпфер)-->
+    </div>
+    <div class="head_website_cl" id="head_website_id">
+        <!--Фиксированный-->
+
+        <div class="organizations_logo_cl" id="organizations_logo_id">
+            <!--иконка организации-->
+            <img src="/static/logo_haske.png" alt="Н/Ф" id="organizations_logo_img_id">
+            <div>
+                <span>HaskiProg</span>
+                <span>Full-Stack веб-разработчик</span>
+            </div>
+        </div>
+
+        <div class="catalog_cl" id="catalog_id">
+            <!--каталог-->
+            <div id="choice_about_me_id">
+                <span>О СЕБЕ</span>
+            </div>
+            <div id="choice_portfolio_id">
+                <span>ПОРТФОЛИО</span>
+            </div>
+            <div id="choice_order_id">
+                <span>ЗАКАЗАТЬ</span>
+            </div>
+            <div id="choice_contacts_id">
+                <span>КОНТАКТЫ</span>
+            </div>
+        </div>
+        <div class="burger_catalog_cl" id="burger_catalog_id">
+            <!--каталог бургер-->
+            <div id="burger_catalog_buttom_id">
+                <!--кнопка скрытого каталога-->
+                КАТАЛОГ &#8659;
+            </div>
+            <div id="burger_catalog_img_buttom_id">
+
+            </div>
+            <div class="burger_catalog_open_cl" id="burger_catalog_open_id">
+                <!--скрытый каталог-->
+                <div id="choice_about_me_mini_id">
+                    <span>О СЕБЕ</span>
+                </div>
+                <div id="choice_portfolio_mini_id">
+                    <span>ПОРТФОЛИО</span>
+                </div>
+                <div id="choice_order_mini_id">
+                    <span>ЗАКАЗАТЬ</span>
+                </div>
+                <div id="choice_contacts_mini_id">
+                    <span>КОНТАКТЫ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================================================================================-->
+    <!--__________________________________ТЕЛО СТРАНИЦА__________________________________-->
+    <!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+    {% block main %}
+    {% endblock %}
+    <!--=================================================================================-->
+    <!--___________________________________ПОДВАЛ САЙТА__________________________________-->
+    <!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+    <footer id="footer_id">
+        <div class="head_footer_cl" id="head_footer_id">
+            <div>
+                <p>
+                    Содержимое данного сайта является собственностью владельцем данного сайта и не может быть распространено без письменного согласия.
+                </p>
+            </div>
+            <div><b>ЭЛ.ПОЧТА:</b><span>m94kesha16mak@mail.ru</span></div>
+            <div><b>КОНТАК.ТЕЛ:</b><span>+7 (707) 684-70-76</span></div>
+        </div>
+        <div class="developer_footer_cl">
+            <a href=""><span>сайт сделан:</span><img src="/static/icon_haske.png" alt="Н/Ф">
+                <b> HaskiProg</b>
+            </a>
+        </div>
+    </footer>
+
+    <script src="/static/main_js.js"></script>
+    <script src="/static/1_main_js.js"></script>
+</body>
+
+</html>
